@@ -9,7 +9,7 @@ ftreliv(){
   c_red_dim=$'\e[02;31m'
   hjerte=$'\u2665'
 
-  if [[ -z ${liv+x} ]] # Liv is not set
+  if [[ -z ${liv+x} || $liv -gt 3 ]] # Liv is not set or set too big
   then
     liv=3
   fi
